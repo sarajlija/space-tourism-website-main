@@ -1,0 +1,59 @@
+@import "variables";
+@mixin transition {
+    transition: transform 400ms,
+    opacity 400ms;
+}
+@mixin list {
+    li {
+        margin-left: 2rem;
+        padding-bottom: 6px;
+        transform: scale(.8, .8);
+        opacity: 0.8;
+        @include transition;
+    
+        &.active {
+            border-bottom: 2px solid white;   
+    
+        }
+    
+        &:hover {
+            transform: scale(1.0, 1.0);
+            opacity: 1;
+        }
+    
+        a {
+            
+            text-transform: uppercase;
+            color: #ffffff;
+
+            span {
+                font-size: 1rem;
+                margin-right: 10px;
+                font-weight: 600;
+            }
+        }
+    }
+    
+}
+
+
+@mixin header {
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    color: #ffffff;
+    font-size: 16px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Barlow',
+    sans-serif;
+    line-height: 1.5;
+    
+}
+
+@mixin navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+} 

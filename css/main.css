@@ -4,16 +4,21 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  list-style: none;
+  font-size: 16px;
 }
 
-/*HOME*/
+a {
+  text-decoration: none;
+}
+
 #header-home {
+  background-image: url("/assets/home/background-home-desktop.jpg");
   position: relative;
   margin: 0;
   height: 100vh;
   color: #ffffff;
   font-size: 16px;
-  background-image: url("/assets/home/background-home-desktop.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,30 +50,8 @@ body {
   display: flex;
   position: relative;
   list-style: none;
-  /*opacity: 0.4;
-            filter: blur(2px);*/
   padding: 1.5rem 1rem;
   z-index: 1;
-}
-
-#header-home nav ul li {
-  margin-left: 2rem;
-}
-
-#header-home nav ul li a {
-  color: #e9e9e9;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-#header-home nav ul li a span {
-  font-size: 1rem;
-  margin-right: 10px;
-  font-weight: 600;
-}
-
-#header-home nav ul li a:hover {
-  color: #b3afaf;
 }
 
 #header-home nav ul::before {
@@ -82,6 +65,39 @@ body {
   -webkit-filter: blur(1px);
           filter: blur(1px);
   z-index: -1;
+}
+
+#header-home nav ul li {
+  margin-left: 2rem;
+  padding-bottom: 6px;
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+  opacity: 0.8;
+  -webkit-transition: opacity 400ms, -webkit-transform 400ms;
+  transition: opacity 400ms, -webkit-transform 400ms;
+  transition: transform 400ms, opacity 400ms;
+  transition: transform 400ms, opacity 400ms, -webkit-transform 400ms;
+}
+
+#header-home nav ul li.active {
+  border-bottom: 2px solid white;
+}
+
+#header-home nav ul li:hover {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  opacity: 1;
+}
+
+#header-home nav ul li a {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+#header-home nav ul li a span {
+  font-size: 1rem;
+  margin-right: 10px;
+  font-weight: 600;
 }
 
 #header-home nav .toggle {
@@ -142,14 +158,28 @@ body {
   text-decoration: none;
 }
 
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
 /*DESTINATION*/
 #header-destination {
+  background-image: url("/assets/destination/background-destination-desktop.jpg");
   position: relative;
   margin: 0;
   height: 100vh;
   color: #ffffff;
   font-size: 16px;
-  background-image: url("/assets/destination/background-destination-desktop.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -188,22 +218,35 @@ body {
 
 #header-destination nav ul li {
   margin-left: 2rem;
+  padding-bottom: 6px;
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+  opacity: 0.8;
+  -webkit-transition: opacity 400ms, -webkit-transform 400ms;
+  transition: opacity 400ms, -webkit-transform 400ms;
+  transition: transform 400ms, opacity 400ms;
+  transition: transform 400ms, opacity 400ms, -webkit-transform 400ms;
+}
+
+#header-destination nav ul li.active {
+  border-bottom: 2px solid white;
+}
+
+#header-destination nav ul li:hover {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  opacity: 1;
 }
 
 #header-destination nav ul li a {
-  color: #e9e9e9;
-  text-decoration: none;
   text-transform: uppercase;
+  color: #ffffff;
 }
 
 #header-destination nav ul li a span {
   font-size: 1rem;
   margin-right: 10px;
   font-weight: 600;
-}
-
-#header-destination nav ul li a:hover {
-  color: #b3afaf;
 }
 
 #header-destination nav ul::before {
@@ -233,22 +276,46 @@ body {
   margin: 0 auto;
 }
 
-#header-destination article .destination__moon p {
+#header-destination article .destination__img p {
   font-size: 28px;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: lighter;
 }
 
-#header-destination article .destination__moon span {
+#header-destination article .destination__img span {
   margin-right: 6px;
   color: #bababa;
   font-weight: 600;
 }
 
-#header-destination article .destination__moon img {
+#header-destination article .destination__img img {
   max-width: 100%;
   height: auto;
+  -webkit-animation: spin 24s linear infinite;
+          animation: spin 24s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 #header-destination article .destination__title {
@@ -271,16 +338,39 @@ body {
 
 #header-destination article .destination__title .destination__nav li {
   margin-left: 2rem;
+  padding-bottom: 6px;
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+  opacity: 0.8;
+  -webkit-transition: opacity 400ms, -webkit-transform 400ms;
+  transition: opacity 400ms, -webkit-transform 400ms;
+  transition: transform 400ms, opacity 400ms;
+  transition: transform 400ms, opacity 400ms, -webkit-transform 400ms;
+}
+
+#header-destination article .destination__title .destination__nav li.active {
+  border-bottom: 2px solid white;
+}
+
+#header-destination article .destination__title .destination__nav li:hover {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  opacity: 1;
 }
 
 #header-destination article .destination__title .destination__nav li a {
-  text-decoration: none;
   text-transform: uppercase;
   color: #ffffff;
 }
 
+#header-destination article .destination__title .destination__nav li a span {
+  font-size: 1rem;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
 #header-destination article .destination__title h1 {
-  font-size: 160px;
+  font-size: 140px;
   font-weight: 300;
   margin: 0;
   text-transform: uppercase;
