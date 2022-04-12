@@ -1,0 +1,9 @@
+@import "variables";
+@import "mixins";
+@import "config";
+
+#header-crew {
+    background-image: url("/assets/destination/background-crew-desktop.jpg");
+    @include header;
+    background-color: yellow;
+}
